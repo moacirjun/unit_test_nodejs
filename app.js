@@ -17,7 +17,7 @@ router.get('/aplicar-desconto/:preco/:desconto', (req, res) => {
     let preco = parseInt(req.params.preco);
     let desconto = parseInt(req.params.desconto);
 
-    res.json({ valorDescontato: index.aplicarDesconto(preco, desconto) });
+    res.json({ valorDescontado: index.aplicarDesconto(preco, desconto) });
 });
 
 app.use('/', router);
@@ -26,3 +26,5 @@ if (require.main === module) {
     app.listen(port)
     console.log(`API rodando na porta ${port}`);
 }
+
+exports = module.exports = app;

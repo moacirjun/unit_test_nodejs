@@ -1,5 +1,6 @@
 test = require('tape');
-index = require('./index');
+index = require('../index');
+app = require('../app');
 
 test('Aplicar desconto', t => {
     t.assert(index.aplicarDesconto(10,5) === 5, 'Desconto aplicado com sucesso!');
